@@ -3,6 +3,12 @@ var current_song = 0;
 var audio = document.querySelector('#cancion');
 audio.src = pistas[current_song];
 
+var lista = document.querySelector('#lista');
+
+pistas.forEach(function(e,i){
+    lista.innerHTML = `${i} ${e}`;
+});
+
 
 function Reproducir() {
     var audio = document.querySelector('#cancion');
@@ -20,8 +26,9 @@ function Siguiente() {
     current_song = current_song % pistas.length;
     var audio = document.querySelector('#cancion');
     audio.src = pistas[current_song];
-    audio.play();
-    Mostrar();
+    audio.play().then( ()=> {
+        Mostrar();
+    });
 }
 
 function Anterior() {
@@ -30,22 +37,26 @@ function Anterior() {
         current_song = pistas.length - 1;
         var audio = document.querySelector('#cancion');
         audio.src = pistas[current_song];
-        audio.play();
+        audio.play().then( ()=> {
+            Mostrar();
+        });;
         Mostrar();
     }
     else {
         current_song--;
         var audio = document.querySelector('#cancion');
         audio.src = pistas[current_song];
-        audio.play();
+        audio.play().then( () =>{
+            console.log("Despues de sonar");
+        });
         Mostrar();
     }
 }
 
 function Mostrar() {
     
-    var minutos = Math.trunc(audio.duration/60);
-    var segundos = Math.round(audio.duration%60);
+    let minutos = Math.trunc(audio.duration/60);
+    let segundos = Math.round(audio.duration%60);
     dummy = pistas[current_song].split('.')[0] + ' ' + minutos + ':' + segundos;
     anadir(dummy);
 }
@@ -54,3 +65,14 @@ function anadir (add){
     var temazo = document.querySelector('#temita');
     temazo.innerHTML = add;
 }
+
+function Reproducir_Lista(){
+
+
+
+
+
+}
+
+
+
