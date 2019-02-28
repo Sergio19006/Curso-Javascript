@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+    text-align: center;
+}
+
+.blanca{
+    background-color: white;
+    border: 3px solid;
+    display: inline-block;
+    height: 200px;
+
+}
+
+.negra{
+    background-color: black;
+    border: 3px;
+    display: inline-block;
+    height: 100px;
+    text-decoration-color: white;
+}
+
+#piano{
+    border: 3px solid;
+    width: 400px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
