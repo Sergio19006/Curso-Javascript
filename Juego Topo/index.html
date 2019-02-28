@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="p.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Juego</title>
+</head>
+
+<body id="body">
+    <div class="container cuadro">
+        <div class="row">
+            <div id="" class="col">1</div>
+            <div class="col casilla">2</div>
+            <div class="col casilla">3</div>
+            <div class="col casilla">4</div>
+        </div>
+        <div class="row">
+            <div class="col casilla">1</div>
+            <div class="col casilla">2</div>
+            <div class="col casilla">3</div>
+            <div class="col casillas">4</div>
+        </div>
+        <div class="row">
+            <div class="col casilla"><img onclick="Sumar_punto()" src="topo.jpg" alt=""></div>
+            <div class="col casilla">2</div>
+            <div class="col casilla">3</div>
+            <div class="col casilla">4</div>
+        </div>
+        <button onclick="start_game()">Que comience el juego</button>
+        <span id="puntos">Puntos</span>
+    </div>
+</body>
+
+<script src="p.js"></script>
+
+</html>

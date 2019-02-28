@@ -1,0 +1,18 @@
+.cuadro{
+    background-color:aquamarine;
+    text-align: center;
+}
+
+.col{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#body{
+    margin-top: 5%;
+}
+
+img{
+    max-width:10%;
+    max-height:10%;
+  }

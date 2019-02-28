@@ -6,6 +6,13 @@
     margin: auto;
 }
 
+#lista{
+    width: 400px;
+    text-align: center;
+    background-color: burlywood;
+    margin: auto;
+}
+
 #lcd{
     background-color: green;
     height: 42px;

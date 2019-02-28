@@ -3,11 +3,26 @@ var current_song = 0;
 var audio = document.querySelector('#cancion');
 audio.src = pistas[current_song];
 
-var lista = document.querySelector('#lista');
 
-pistas.forEach(function(e,i){
-    lista.innerHTML = `${i} ${e}`;
-});
+var dummy = "";
+
+function Mostrar_lista(){
+    pistas.forEach(function(e,i){
+        dummy += `<div id"${i} OnClick="Bombita(${i})"> ${i++} ${e} </div>`;
+    });
+    var lista = document.querySelector('#lista');
+    lista.innerHTML = dummy;
+
+}
+
+function Bombita(cancion){
+    current_song = cancion;
+    audio.src = pistas[cancion];
+    audio.play().then( ()=> {
+        Mostrar();
+    });
+}
+
 
 
 function Reproducir() {
@@ -39,17 +54,15 @@ function Anterior() {
         audio.src = pistas[current_song];
         audio.play().then( ()=> {
             Mostrar();
-        });;
-        Mostrar();
+        });
     }
     else {
         current_song--;
         var audio = document.querySelector('#cancion');
         audio.src = pistas[current_song];
         audio.play().then( () =>{
-            console.log("Despues de sonar");
-        });
-        Mostrar();
+            Mostrar();
+        });    
     }
 }
 
