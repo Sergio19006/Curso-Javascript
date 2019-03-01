@@ -1,4 +1,4 @@
-var pistas = ['contando-lunares.mp3', 'calma.mp3', 'ella.mp3', 'bichote.mp3'];
+var pistas = ['contando-lunares.mp3', 'calma.mp3', 'ella.mp3', 'bichote.mp3','secreto.mp3'];
 var current_song = 0;
 var audio = document.querySelector('#cancion');
 audio.src = pistas[current_song];
